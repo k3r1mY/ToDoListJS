@@ -1,0 +1,13 @@
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #f95959;
+  color: #e3e3e3;
+  font-size: 30px;
+}
+body {
+  background-color: #e3e3e3;
+}
+.p {
+  padding: 5px;
+}

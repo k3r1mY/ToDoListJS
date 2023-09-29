@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="header"><h1>ToDo List</h1></div>
+    <div>
+      <h2>Create Task</h2>
+      <form action="/create-task" method="POST">
+        <label for="taskName">Task:</label>
+        <input
+          type="text"
+          id="taskName"
+          name="taskName"
+          placeholder="Enter Task Name"
+        />
+        <input type="submit" value="Add Task" />
+      </form>
+      <ul>
+        <% tasks.forEach((task) => { %>
+        <li><%= task %></li>
+        <form action="/delete-task" method="POST">
+          <input type="hidden" name="taskIndex" id="taskIndex" />
+          <button type="button">Delete Task</button>
+        </form>
+        <% }); %>
+      </ul>
+    </div>
+
+    <div>
+      <form action="/reset-tasks" method="POST">
+        <button type="submit">Reset Tasks</button>
+      </form>
+    </div>
+  </body>
+  <body></body>
+</html>
